@@ -25,5 +25,12 @@ public class ZoomInObject : MonoBehaviour, IInteractable
         
         //change state to zoomed
         currentDisplay.CurrentState = DisplayImage.State.Zoomed;
+
+        ConstraintCamera();
+    }
+
+    private void ConstraintCamera()
+    {
+        GameObject.Find("cameraBounds").GetComponent<CameraBounds>().CheckConstraint();
     }
 }
