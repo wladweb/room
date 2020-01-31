@@ -5,19 +5,13 @@ public class DisplayImage : MonoBehaviour
     private int _currentWall;
     private int _previousWall;
 
-    private void Start()
+    public enum State 
     {
-        _currentWall = 1;
-        _previousWall = 0;
+        Normal,
+        Zoomed
     }
 
-    private void Update()
-    {
-        if (_currentWall != _previousWall) 
-        {
-            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/wall" + CurrentWall);
-        }
-    }
+    public State CurrentState { get; set; }
 
     public int CurrentWall 
     {
@@ -41,6 +35,20 @@ public class DisplayImage : MonoBehaviour
             }
 
             
+        }
+    }
+
+    private void Start()
+    {
+        _currentWall = 1;
+        _previousWall = 0;
+    }
+
+    private void Update()
+    {
+        if (_currentWall != _previousWall)
+        {
+            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/wall" + CurrentWall);
         }
     }
 }

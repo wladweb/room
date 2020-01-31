@@ -19,5 +19,11 @@ public class ZoomInObject : MonoBehaviour, IInteractable
         SetUpCameraPosition();
         Camera.main.orthographicSize *= zoomRatio;
         Camera.main.transform.position = new Vector3(positionX, positionY, positionZ);
+
+        //ignore raycast after first zoom
+        gameObject.layer = 2;
+        
+        //change state to zoomed
+        currentDisplay.CurrentState = DisplayImage.State.Zoomed;
     }
 }
