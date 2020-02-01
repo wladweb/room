@@ -35,7 +35,7 @@ public class ButtonBehaviour : MonoBehaviour
                 Display();
             }
         }
-        else if (currentDisplay.CurrentState == DisplayImage.State.Zoomed) 
+        else if (currentDisplay.CurrentState != DisplayImage.State.Normal) 
         {
             if (ThisButtonType == ButtonType.ReturnButton)
             {

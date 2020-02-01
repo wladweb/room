@@ -670,7 +670,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1318498192}
-        m_MethodName: OnClickZoomReturn
+        m_MethodName: OnClickReturn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

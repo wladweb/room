@@ -8,7 +8,8 @@ public class DisplayImage : MonoBehaviour
     public enum State 
     {
         Normal,
-        Zoomed
+        Zoomed,
+        ChangedView
     }
 
     public State CurrentState { get; set; }
