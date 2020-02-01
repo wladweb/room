@@ -50,6 +50,7 @@ public class DisplayImage : MonoBehaviour
         if (_currentWall != _previousWall)
         {
             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/wall" + CurrentWall);
+            _previousWall = _currentWall;
         }
     }
 }
