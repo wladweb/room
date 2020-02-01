@@ -42,6 +42,7 @@ public class DisplayImage : MonoBehaviour
     {
         _currentWall = 1;
         _previousWall = 0;
+        CurrentState = State.Normal;
     }
 
     private void Update()

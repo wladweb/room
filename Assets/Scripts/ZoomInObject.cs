@@ -32,5 +32,7 @@ public class ZoomInObject : MonoBehaviour, IInteractable
     private void ConstraintCamera()
     {
         GameObject.Find("cameraBounds").GetComponent<CameraBounds>().CheckConstraint();
+
+        var zoomedObjects = FindObjectsOfType<ZoomInObject>();
     }
 }
