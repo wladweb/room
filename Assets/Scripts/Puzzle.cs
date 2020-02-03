@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class Puzzle : MonoBehaviour
 {
-    public bool IsCompleted { get; private set; }
+    public bool IsCompleted { get; private set; } = false;
 
     private DisplayImage currentDisplay;
 
@@ -14,6 +14,10 @@ public class Puzzle : MonoBehaviour
 
     private void Update()
     {
+        if (CompletePuzzle())
+        {
+            Debug.Log("Complete");
+        }
         HideDisplay();
     }
 
@@ -28,5 +32,25 @@ public class Puzzle : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    bool CompletePuzzle() 
+    {
+        if (IsCompleted) return true;
+
+        IsCompleted = true;
+
+        PuzzlePiece[] puzzlePieces = FindObjectsOfType<PuzzlePiece>();
+
+        foreach (PuzzlePiece piece in puzzlePieces)
+        {
+            if (!(piece.pieceNumber == piece.SpriteNumber())) 
+            {
+                IsCompleted = false;
+                break;
+            }
+        }
+
+        return IsCompleted;
     }
 }
