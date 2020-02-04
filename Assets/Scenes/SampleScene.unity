@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 144085083}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.99999976
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1496,6 +1496,7 @@ MonoBehaviour:
   - {fileID: 11143673}
   - {fileID: 1031500756}
   - {fileID: 2122627525}
+  - {fileID: 1244591833}
   UIRendererObjects:
   - {fileID: 980334967}
 --- !u!4 &609054680 stripped
@@ -1991,6 +1992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dce9ef41978e634db743bc2a207e4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  claimItem: {fileID: 1298346166176627452, guid: 847beaba061424049ab309de8d0cf88a,
+    type: 3}
 --- !u!1 &1003857982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,7 +2378,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 337783702}
   m_HandleRect: {fileID: 337783701}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 0.00000024042834
   m_Size: 0.6041564
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2624,6 +2627,7 @@ GameObject:
   - component: {fileID: 1158341167}
   - component: {fileID: 1158341169}
   - component: {fileID: 1158341168}
+  - component: {fileID: 1158341170}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -2686,6 +2690,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158341166}
   m_CullTransparentMesh: 0
+--- !u!114 &1158341170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158341166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2efb63437b0f86b40b75ff614b1cc132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1169718645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,7 +3096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000076293945, y: -0.000015258789}
+  m_AnchoredPosition: {x: -0.0000076293945, y: -0.000015258789}
   m_SizeDelta: {x: 126.93, y: 180.6}
   m_Pivot: {x: 0, y: 1}
 --- !u!1001 &1354359323
@@ -3972,7 +3988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300016, guid: 9fa7c5c1ca756e64c910f56e548dea9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da548140b249b5042b0323166094baed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -4,7 +4,8 @@ using UnityEngine.EventSystems;
 public class Puzzle : MonoBehaviour
 {
     public bool IsCompleted { get; private set; } = false;
-
+    public GameObject claimItem;
+    private bool itemSpawn;
     private DisplayImage currentDisplay;
 
     private void Start()
@@ -14,9 +15,11 @@ public class Puzzle : MonoBehaviour
 
     private void Update()
     {
-        if (CompletePuzzle())
+        if (CompletePuzzle() && !itemSpawn)
         {
-            Debug.Log("Complete");
+            Object claimItemClone = Instantiate(claimItem, GameObject.Find("piece8").transform, false);
+            claimItem.transform.localScale = new Vector3(15, 15, 15);
+            itemSpawn = true;
         }
         HideDisplay();
     }

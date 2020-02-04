@@ -6,7 +6,7 @@ public class PuzzlePiece : MonoBehaviour, IPointerClickHandler
 {
     private Puzzle puzzle;
     public int pieceNumber { get; private set; }
-    private const string emptySpriteName = "mushroom puzzle_8";
+    private const string emptySpriteName = "empty_item8";
 
     void Start() 
     {
