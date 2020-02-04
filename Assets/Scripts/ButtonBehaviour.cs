@@ -28,7 +28,7 @@ public class ButtonBehaviour : MonoBehaviour
             if (ThisButtonType == ButtonType.ReturnButton)
             {
                 Hide();
-                this.transform.SetSiblingIndex(0);
+                //this.transform.SetSiblingIndex(0);
             }
             else if (ThisButtonType == ButtonType.RoomChangeButton)
             {
