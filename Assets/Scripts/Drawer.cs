@@ -16,9 +16,7 @@ public class Drawer : MonoBehaviour, IInteractable
         Debug.Log("Click");
         if (inventory.CurrentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == unlockItem.name) 
         {
-            inventory.CurrentSelectedSlot.GetComponent<Slot>().ItemProperty = Slot.Property.Empty;
-            inventory.CurrentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("InventoryItems/empty_item");
-            Debug.Log("Unlock");
+            inventory.CurrentSelectedSlot.GetComponent<Slot>().ClearSlot();
         }
     }
 }

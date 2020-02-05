@@ -48,7 +48,7 @@ public class Inventory : MonoBehaviour
             }
             else if (slot.gameObject == CurrentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.Property.Displayable)
             {
-                slot.GetComponent<Slot>().DisplayItem();
+                //slot.GetComponent<Slot>().DisplayItem();
             }
             else
             {
