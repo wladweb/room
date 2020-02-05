@@ -31,7 +31,11 @@ public class Inventory : MonoBehaviour
         {
             Transform item = slot.GetChild(0);
             item.GetComponent<Image>().sprite = Resources.Load<Sprite>("InventoryItems/empty_item");
+            slot.GetComponent<Slot>().ItemProperty = Slot.Property.Empty;
         }
+
+        CurrentSelectedSlot = GameObject.Find("Slot");
+        PreviousSelectedSlot = CurrentSelectedSlot;
     }
 
     void SelectSlot() 
