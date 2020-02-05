@@ -10,6 +10,8 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     private string displayImage;
 
+    public string CombinationItem { get; private set; }
+
     void Start() 
     {
         inventory = GameObject.Find("Inventory").GetComponent<Inventory>();  
@@ -19,6 +21,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     {
         inventory.PreviousSelectedSlot = inventory.CurrentSelectedSlot;
         inventory.CurrentSelectedSlot = gameObject;
+        Combine();
     }
 
     public void AssignProperty(int orderNumber, string displayImage)
@@ -31,5 +34,13 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     {
         inventory.ItemDisplayer.SetActive(true);
         inventory.ItemDisplayer.GetComponent<Image>().sprite = Resources.Load<Sprite>("InventoryItems/" + displayImage);
+    }
+
+    void Combine() 
+    {
+        if (inventory.PreviousSelectedSlot.GetComponent<Slot>().CombinationItem == CombinationItem)
+        {
+            Debug.Log("combine");
+        }
     }
 }

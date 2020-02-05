@@ -10,6 +10,8 @@ public class PickUpItem : MonoBehaviour, IInteractable
     public enum Property { Usable, Displayable }
     public Property itemProperty;
 
+    public string CombinationItem;
+
     public void Interact(DisplayImage currentDisplay)
     {
         ItemPickUp();
