@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IPointerClickHandler
 {
     private Inventory inventory;
-    public enum Property { Usable, Displayable }
-    public Property ItemProperty { get; private set; }
+    public enum Property { Usable, Displayable, Empty }
+    public Property ItemProperty { get; set; }
+
+    private string displayImage;
 
     void Start() 
     {
@@ -18,8 +21,15 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         inventory.CurrentSelectedSlot = gameObject;
     }
 
-    public void AssignProperty(int orderNumber)
+    public void AssignProperty(int orderNumber, string displayImage)
     {
         ItemProperty = (Property) orderNumber;
-    }   
+        this.displayImage = displayImage;
+    }
+
+    public void DisplayItem() 
+    {
+        inventory.ItemDisplayer.SetActive(true);
+        inventory.ItemDisplayer.GetComponent<Image>().sprite = Resources.Load<Sprite>("InventoryItems/" + displayImage);
+    }
 }
