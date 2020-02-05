@@ -32,11 +32,8 @@ public class Inventory : MonoBehaviour
         
         foreach (Transform slot in slots.transform)
         {
-            //Debug.Log(slot.gameObject);
-            Debug.Log(CurrentSelectedSlot);
             if (slot.gameObject == CurrentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.Property.Usable)
             {
-                
                 slot.GetComponent<Image>().color = new Color(.5f, .2f, .34f, 1);
             }
             else

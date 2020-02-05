@@ -120,4 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displaySprite: key_yellow
-  itemProperty: 1
+  itemProperty: 0

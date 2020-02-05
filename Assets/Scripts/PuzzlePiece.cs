@@ -52,7 +52,6 @@ public class PuzzlePiece : MonoBehaviour, IPointerClickHandler
         Sprite temp = img1.sprite;
         img1.sprite = img2.sprite;
         img2.sprite = temp;
-        Debug.Log("Change");
     }
 
     public int SpriteNumber() 
