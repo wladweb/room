@@ -3,7 +3,12 @@ using UnityEngine.UI;
 
 public class DynamicObject : MonoBehaviour, IInteractable
 {
+    public enum InteractionProperty { SimpleInteraction, AccessInteraction}
+    public InteractionProperty Property;
+
     public string UnlockItem;
+    public GameObject AccessObject;
+
     public GameObject ChangeStateSprite;
     private GameObject inventory;
 
