@@ -13,11 +13,12 @@ public class NumberLock : MonoBehaviour
     public int[] currentIndividualIndex = new int[4] { 0, 0, 0, 0 };
 
     public GameObject OpenLockerSprite;
-
+    private GameObject displayImage;
     private bool isOpen;
 
     private void Start()
     {
+        displayImage = GameObject.Find("displayImage");
         OpenLockerSprite.SetActive(false);
         isOpen = false;
         LoadAllNumberSprites();
@@ -26,6 +27,7 @@ public class NumberLock : MonoBehaviour
     private void Update()
     {
         OpenLocker();
+        LayerManager();
     }
 
     void LoadAllNumberSprites() 
@@ -59,6 +61,32 @@ public class NumberLock : MonoBehaviour
         {
             isOpen = true;
             OpenLockerSprite.SetActive(true);
+
+            for (int i = 0; i < 4; i++)
+            {
+                Destroy(transform.GetChild(i).gameObject);
+            }
+        }
+    }
+
+    void LayerManager() 
+    {
+        if (isOpen) return;
+
+        if (displayImage.GetComponent<DisplayImage>().CurrentState == DisplayImage.State.Normal)
+        {
+            foreach (Transform child in transform)
+            {
+                child.gameObject.layer = 2;
+            }
+        }
+        else 
+        {
+            foreach (Transform child in transform)
+            {
+                child.gameObject.layer = 0;
+            }
+
         }
     }
 }
