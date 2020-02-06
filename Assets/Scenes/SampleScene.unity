@@ -858,7 +858,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312855495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.046, y: -1.599, z: 0.0000000037253}
+  m_LocalPosition: {x: 7.072, y: -1.627, z: 0.0000000037253}
   m_LocalScale: {x: 0.046377975, y: 0.046377975, z: 0.046377975}
   m_Children: []
   m_Father: {fileID: 480304869}
@@ -929,7 +929,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.8, y: 6.4999995}
+    oldSize: {x: 3.37, y: 5.23}
     newSize: {x: 4.8, y: 6.4999995}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 144085083}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.99999994
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1528,7 +1528,6 @@ GameObject:
   m_Component:
   - component: {fileID: 480304869}
   - component: {fileID: 480304871}
-  - component: {fileID: 480304870}
   m_Layer: 0
   m_Name: numberLock
   m_TagString: Untagged
@@ -1554,20 +1553,6 @@ Transform:
   m_Father: {fileID: 1155759182}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &480304870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480304868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e367c741f5f9c488b825657c547f41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberSprites: []
-  currentIndividualIndex: 00000000000000000000000000000000
 --- !u!114 &480304871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,6 +1565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e367c741f5f9c488b825657c547f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  password: 1234
   numberSprites: []
   currentIndividualIndex: 00000000000000000000000000000000
 --- !u!1 &519420028
@@ -1985,7 +1971,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808274422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.692, y: -1.599, z: 0.0000000037253}
+  m_LocalPosition: {x: 6.718, y: -1.627, z: 0.0000000037253}
   m_LocalScale: {x: 0.046377975, y: 0.046377975, z: 0.046377975}
   m_Children: []
   m_Father: {fileID: 480304869}
@@ -2056,7 +2042,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.8, y: 6.4999995}
+    oldSize: {x: 3.37, y: 5.23}
     newSize: {x: 4.8, y: 6.4999995}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2668,7 +2654,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 337783702}
   m_HandleRect: {fileID: 337783701}
   m_Direction: 0
-  m_Value: 0.00000024042828
+  m_Value: 0.00000012021414
   m_Size: 0.6041563
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3266,7 +3252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305768330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.396, y: -1.599, z: 0.0000000037253}
+  m_LocalPosition: {x: 7.422, y: -1.627, z: 0.0000000037253}
   m_LocalScale: {x: 0.046377975, y: 0.046377975, z: 0.046377975}
   m_Children: []
   m_Father: {fileID: 480304869}
@@ -3337,7 +3323,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.8, y: 6.4999995}
+    oldSize: {x: 3.37, y: 5.23}
     newSize: {x: 4.8, y: 6.4999995}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5180,7 +5166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792984552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.743, y: -1.599, z: 0.0000000037253}
+  m_LocalPosition: {x: 7.769, y: -1.627, z: 0.0000000037253}
   m_LocalScale: {x: 0.046377975, y: 0.046377975, z: 0.046377975}
   m_Children: []
   m_Father: {fileID: 480304869}
@@ -5251,7 +5237,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.8, y: 6.4999995}
+    oldSize: {x: 3.37, y: 5.23}
     newSize: {x: 4.8, y: 6.4999995}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
