@@ -9,11 +9,17 @@ public class NumberLock : MonoBehaviour
 
     [HideInInspector]
     public Sprite[] numberSprites;
+    [HideInInspector]
     public int[] currentIndividualIndex = new int[4] { 0, 0, 0, 0 };
+
+    public GameObject OpenLockerSprite;
+
     private bool isOpen;
 
     private void Start()
     {
+        OpenLockerSprite.SetActive(false);
+        isOpen = false;
         LoadAllNumberSprites();
     }
 
@@ -52,7 +58,7 @@ public class NumberLock : MonoBehaviour
         if (VerifyCorrectCode()) 
         {
             isOpen = true;
-            Debug.Log("Open");
+            OpenLockerSprite.SetActive(true);
         }
     }
 }
