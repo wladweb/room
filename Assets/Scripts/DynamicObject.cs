@@ -17,6 +17,11 @@ public class DynamicObject : MonoBehaviour, IInteractable
         if (inventory.GetComponent<Inventory>().CurrentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == UnlockItem || UnlockItem == "")
         {
             ChangeStateSprite.SetActive(true);
+            gameObject.layer = 2;
+
+            if (Property == InteractionProperty.SimpleInteraction) return;
+
+            AccessObject.SetActive(true);
             inventory.GetComponent<Inventory>().CurrentSelectedSlot.GetComponent<Slot>().ClearSlot();
         }
     }
@@ -25,5 +30,7 @@ public class DynamicObject : MonoBehaviour, IInteractable
     {
         ChangeStateSprite.SetActive(false);
         inventory = GameObject.Find("Inventory");
+        if (Property == InteractionProperty.SimpleInteraction) return;
+        AccessObject.SetActive(false);
     }
 }

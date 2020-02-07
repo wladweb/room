@@ -7,6 +7,9 @@ public class DynamicObjectEditor : Editor
     public override void OnInspectorGUI()
     {
         DynamicObject dynamicObject = target as DynamicObject;
+
+        dynamicObject.ChangeStateSprite = (GameObject)EditorGUILayout.ObjectField("ChangeState", dynamicObject.ChangeStateSprite, typeof(GameObject), true);
+
         dynamicObject.Property = (DynamicObject.InteractionProperty)EditorGUILayout.EnumPopup("Property", dynamicObject.Property);
 
         if (dynamicObject.Property == DynamicObject.InteractionProperty.AccessInteraction)
