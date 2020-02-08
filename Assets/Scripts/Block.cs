@@ -3,6 +3,15 @@ using UnityEngine.EventSystems;
 
 public class Block : MonoBehaviour, IDragHandler, IDropHandler
 {
+    public int correctBoxIndex;
+    public int indexOfBox { get; private set; }
+
+    void Start() 
+    {
+        indexOfBox = -1;
+        gameObject.SetActive(false);
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -28,8 +37,8 @@ public class Block : MonoBehaviour, IDragHandler, IDropHandler
                 mousePosition.y >= currentScaleBoxPositionY - currentScaleBoxHeight
                 )
             {
-                Debug.Log(transform.position);
                 transform.position = new Vector3(currentScaleBoxPositionX, currentScaleBoxPositionY, transform.position.z);
+                indexOfBox = i;
             }
         }
     }

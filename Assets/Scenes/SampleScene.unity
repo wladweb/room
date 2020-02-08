@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad78bdcda2615f43a2c407f9cf45ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctBoxIndex: 2
 --- !u!1 &11143673
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad78bdcda2615f43a2c407f9cf45ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctBoxIndex: 3
 --- !u!1 &144085082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2120,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 144085083}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3127,6 +3129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad78bdcda2615f43a2c407f9cf45ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctBoxIndex: 4
 --- !u!1001 &758284536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6076,6 +6079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad78bdcda2615f43a2c407f9cf45ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctBoxIndex: 1
 --- !u!4 &1548565377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5605101392672240387, guid: 49e6e210eba8eed40a4763f3b0dfcb43,
@@ -7672,6 +7676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad78bdcda2615f43a2c407f9cf45ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctBoxIndex: 0
 --- !u!1 &1836211787
 GameObject:
   m_ObjectHideFlags: 0
@@ -8014,11 +8019,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleBoxes:
-  - {fileID: 387706252}
-  - {fileID: 374479546}
-  - {fileID: 541669592}
-  - {fileID: 866981516}
   - {fileID: 1047516901}
+  - {fileID: 374479546}
+  - {fileID: 387706252}
+  - {fileID: 866981516}
+  - {fileID: 541669592}
 --- !u!1 &1908106464
 GameObject:
   m_ObjectHideFlags: 0
