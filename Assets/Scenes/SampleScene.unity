@@ -2118,7 +2118,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 144085083}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4135,7 +4135,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 337783702}
   m_HandleRect: {fileID: 337783701}
   m_Direction: 0
-  m_Value: 0.0000001202142
+  m_Value: 0.0000002404284
   m_Size: 0.60415643
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4421,7 +4421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120746844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0941315, y: -0.57389724, z: -3.9277344}
+  m_LocalPosition: {x: -1.0941315, y: -0.57389724, z: -0.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 387706253}
@@ -7969,6 +7969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1904030088}
+  - component: {fileID: 1904030089}
   m_Layer: 5
   m_Name: Scale
   m_TagString: Untagged
@@ -8000,6 +8001,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1904030089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904030087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0e3a69e4e6e794694a6fedca1d1e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleBoxes:
+  - {fileID: 387706252}
+  - {fileID: 374479546}
+  - {fileID: 541669592}
+  - {fileID: 866981516}
+  - {fileID: 1047516901}
 --- !u!1 &1908106464
 GameObject:
   m_ObjectHideFlags: 0
