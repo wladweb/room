@@ -7,7 +7,9 @@ public class Scale : MonoBehaviour
     public GameObject[] scaleBoxes;
     private Block[] blocks;
     private DisplayImage currentDisplay;
+    public GameObject scaleDisplayer;
     private int[] weight = new int[5] { 1, 2, 4, 8, 3 };
+    public bool isSolved { get; private set; } = false;
 
     private void Start()
     {
@@ -19,9 +21,11 @@ public class Scale : MonoBehaviour
     {
         Display();
 
-        if (VerifySolution()) 
+        if (VerifySolution() && !isSolved) 
         {
-            Debug.Log("scale solved");
+            isSolved = true;
+            scaleDisplayer.GetComponent<ChangeView>().spriteName = "scale solved";
+            currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/scale solved");
         }
     }
 
@@ -29,7 +33,7 @@ public class Scale : MonoBehaviour
     {
         for (int i = 0, l = blocks.Length; i < l; i++)
         {
-            if (currentDisplay.GetComponent<SpriteRenderer>().sprite.name == "scale")
+            if (currentDisplay.GetComponent<SpriteRenderer>().sprite.name == "scale" || currentDisplay.GetComponent<SpriteRenderer>().sprite.name == "scale solved")
             {
                 blocks[i].gameObject.SetActive(true);
             }
