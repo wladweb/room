@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ExitDoor : MonoBehaviour,IInteractable
@@ -15,6 +17,7 @@ public class ExitDoor : MonoBehaviour,IInteractable
             ChangeStateSprite.SetActive(true);
             gameObject.layer = 2;
             Instantiate(EscapeMessage, GameObject.Find("Canvas").transform);
+            StartCoroutine(LoadMenu());
         }
     }
 
@@ -22,5 +25,11 @@ public class ExitDoor : MonoBehaviour,IInteractable
     {
         ChangeStateSprite.SetActive(false);
         inventory = GameObject.Find("Inventory");
+    }
+
+    public IEnumerator LoadMenu() 
+    {
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene("menu");
     }
 }

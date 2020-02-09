@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonHandler : MonoBehaviour
 {
@@ -44,5 +45,15 @@ public class ButtonHandler : MonoBehaviour
         }
 
         currentDisplay.CurrentState = DisplayImage.State.Normal;
+    }
+
+    public void OnClickPlay() 
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void OnClickExit() 
+    {
+        Application.Quit();
     }
 }
