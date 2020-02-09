@@ -11,7 +11,7 @@ public class Scale : MonoBehaviour
     private int[] weight = new int[5] { 1, 2, 4, 8, 3 };
     public bool isSolved { get; private set; } = false;
 
-    private void Start()
+    private void Awake()
     {
         currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayImage>();
         blocks = FindObjectsOfType<Block>();

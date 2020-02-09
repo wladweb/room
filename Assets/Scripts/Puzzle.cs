@@ -18,7 +18,7 @@ public class Puzzle : MonoBehaviour
         if (CompletePuzzle() && !itemSpawn)
         {
             Object claimItemClone = Instantiate(claimItem, GameObject.Find("piece8").transform, false);
-            claimItem.transform.localScale = new Vector3(15, 15, 15);
+            claimItem.transform.localScale = new Vector3(35, 35, 35);
             itemSpawn = true;
         }
         HideDisplay();
