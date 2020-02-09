@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ExitDoor : MonoBehaviour
+public class ExitDoor : MonoBehaviour,IInteractable
 {
     public string UnlockItem;
     public GameObject ChangeStateSprite;
@@ -14,6 +14,7 @@ public class ExitDoor : MonoBehaviour
         {
             ChangeStateSprite.SetActive(true);
             gameObject.layer = 2;
+            Instantiate(EscapeMessage, GameObject.Find("Canvas").transform);
         }
     }
 
